@@ -1,0 +1,191 @@
+.main {
+  display: grid;
+  grid-template-rows: 1fr 20fr 2fr;
+  width: 100%;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100%;
+}
+
+.hero > div:nth-child(2) {
+  background-color: var(--bg-c-light-white);
+}
+
+/* --- RIGHT SIDE --- */
+
+.rightContainer {
+  color: var(--bg-c-jet-black);
+  align-items: center;
+  border-left: 1px solid var(--bg-c-jet-black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+/* --- LEFT SIDE --- */
+
+.leftContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 8rem;
+}
+
+.tagline {
+  margin-top: -4rem;
+  padding-left: 9rem;
+  position: absolute;
+  transform: rotate(-12deg);
+  white-space: nowrap;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+}
+
+.choices {
+  display: flex;
+  flex-direction: row;
+  gap: 7rem;
+  margin-top: 3rem;
+  z-index: 999;
+}
+
+.clicked {
+  padding-top: 1.5rem;
+}
+
+.introText {
+  font-weight: 600;
+  padding: 0 8rem 2rem;
+  text-align: center;
+}
+
+.illustrationLeft {
+  left: 0;
+  position: absolute;
+  top: 13rem;
+}
+
+.illustrationRight {
+  position: absolute;
+  right: -1rem;
+  top: 1.5rem;
+}
+
+@media (max-width: 1290px) {
+  .main {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .hero > div:nth-child(1) {
+    padding: 4rem 3rem;
+  }
+
+  .hero > div:nth-child(2) {
+    align-items: flex-start;
+    display: flex;
+    padding: 3rem;
+  }
+
+  .tagline {
+    margin-top: -1rem;
+    padding-left: 36rem;
+  }
+
+  .introText {
+    padding: 0 0 2rem;
+    text-align: left;
+  }
+
+  .illustrationLeft {
+    display: none;
+  }
+}
+
+@media (max-width: 916px) {
+  .main {
+    display: grid;
+    grid-template-rows: 1fr;
+    width: 100%;
+  }
+}
+
+@media (max-width: 852px) {
+  .tagline {
+    margin-top: -4rem;
+    padding-left: 9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .tagline {
+    margin-top: -4rem;
+    padding-left: 9rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero h1 {
+    font-size: 7.8rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .hero h1 {
+    font-size: 6rem;
+    line-height: 5.5rem;
+    width: 90%;
+  }
+
+  .leftContainer {
+    padding: 0;
+  }
+
+  .tagline {
+    font-size: 2rem;
+    margin-top: -3rem;
+    padding-left: 6rem;
+  }
+
+  .introText {
+    font-size: 2rem;
+    width: 95%;
+  }
+
+  .choices {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    margin-top: 3rem;
+    z-index: 999;
+  }
+
+  .choices select{
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 390px) {
+.hero h1 {
+    font-size: 5.25rem;
+    line-height: 4.5rem;
+    width: 90%;
+  }
+
+  .choices {
+    display: flex;
+    gap: 2rem;
+  }
+}

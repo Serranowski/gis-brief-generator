@@ -1,0 +1,24 @@
+.nav {
+  border-bottom: 1px solid var(--bg-c-light-white);
+  border-top: 1px solid var(--bg-c-light-white);
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+}
+
+.logo {
+  border-right: 1px solid var(--bg-c-light-white);
+  padding: 0 3rem;
+}
+
+.menu {
+  border-left: 1px solid var(--bg-c-light-white);
+  padding: 0 1rem;
+}
+
+.logo,
+.menu {
+  align-items: center;
+  display: flex;
+  height: 100%;
+}

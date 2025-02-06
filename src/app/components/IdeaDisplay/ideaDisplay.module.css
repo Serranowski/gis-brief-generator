@@ -1,0 +1,83 @@
+.main {
+  text-align: center;
+}
+
+.ideaContainer {
+  line-height: 3rem;
+  padding: 0 10rem;
+}
+
+.idea {
+  font-family: var(--font-body-copy);
+  font-size: var(--fs-paragraph-M);
+}
+
+.deadline {
+  align-items: center;
+  display: flex;
+  font-size: 0.8rem;
+  justify-content: center;
+}
+
+.underline {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 2rem;
+  text-decoration: underline;
+  text-decoration-color: var(--c-red);
+  text-decoration-thickness: 2px;
+  margin: 0 0.3rem;
+}
+
+@media only screen and (max-width: 1390px) {
+  .ideaContainer {
+    padding: 0 8rem;
+  }
+}
+
+@media (max-width: 1290px) {
+  .main {
+    text-align: left;
+  }
+
+  .deadline {
+    display: flex;
+    font-size: 0.8rem;
+    justify-content: left;
+  }
+
+  .ideaContainer {
+    padding: 0;
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .ideaContainer {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .ideaContainer {
+    padding: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 430px) {
+  .deadline {
+    font-size: 0.7rem;
+  }
+
+  .ideaContainer {
+    padding: 0;
+    width: 95%;
+  }
+
+  .ideaContainer span{
+    font-size: 2.5rem;
+    line-height: 1.5rem;
+  }
+}
