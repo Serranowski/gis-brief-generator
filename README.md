@@ -17,7 +17,7 @@ The GIS Brief Generator is an intuitive web application tool that streamlines th
 
 ## Features
 
-- Select a map type and a map scope... Or go completely random if you feel more adventurous!
+- Select a map type and a map scope... Or go completely random if you feel adventurous!
 - Receive a GIS brief and a deadline based on your selection.
 - User-friendly interface and intuitive design.
 
