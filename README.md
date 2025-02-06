@@ -2,15 +2,11 @@
 
 Struggling to start a new GIS project? This React-based web app helps you map your ideas in seconds. No more blank page anxiety!
 
-<div align="center">
-  <img 
-    alt="Image of website" 
-    src="https://github.com/jennynguyenoberg/creative-brief-generator/assets/116844306/6c18eb53-c15c-46cd-9b9e-188013887bea" width="100%" />
-</div>
+![GIS-Brief-Generator](https://github.com/user-attachments/assets/1179e8e5-5de0-4a59-9e40-98af2bb5cd31)
 
 
 ## Description
-The GIS Brief Generator is an intuitive web application tool that streamlines the creation of GIS project briefs; by selecting a map type and a map scope, it will provide you with a random GIS briefing and a deadline. Based on the Creative Brief Generator by Jenny Nguyen Öberg.
+The GIS Brief Generator is an intuitive web application tool that streamlines the creation of GIS project briefs; by selecting a map type and a map scope, it will provide you with a random GIS briefing and a deadline. Based on the [Creative Brief Generator](https://creative-brief-generator.vercel.app/) by [Jenny Nguyen Öberg](https://github.com/jennynguyenoberg).
 
 ## Table of Contents
 
@@ -22,7 +18,7 @@ The GIS Brief Generator is an intuitive web application tool that streamlines th
 ## Features
 
 - Select a map type and a map scope... Or go completely random if you feel more adventurous!
-- Receive a random GIS brief and a deadline based on your selection.
+- Receive a GIS brief and a deadline based on your selection.
 - User-friendly interface and intuitive design.
 
 ## Technologies Used
@@ -37,7 +33,7 @@ To get started with this project, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone git@github.com:jennynguyenoberg/creative-brief-generator.git
+   git clone git@github.com:JuanBreva/gis-brief-generator.git
 2. Navigate to the project directory:
 
    ```bash
