@@ -33,7 +33,7 @@ To get started with this project, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone git@github.com:JuanBreva/gis-brief-generator.git
+   git clone git@github.com:Serranowski/gis-brief-generator.git
 2. Navigate to the project directory:
 
    ```bash
