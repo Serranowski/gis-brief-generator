@@ -18,5 +18,18 @@
   "devDependencies": {
     "eslint": "^8",
     "eslint-config-next": "14.0.0"
-  }
+  },
+  "description": "Struggling to start a new GIS project? This React-based web app helps you map your ideas in seconds. No more blank page anxiety!",
+  "main": "next.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanBreva/gis-brief-generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JuanBreva/gis-brief-generator/issues"
+  },
+  "homepage": "https://github.com/JuanBreva/gis-brief-generator#readme"
 }
