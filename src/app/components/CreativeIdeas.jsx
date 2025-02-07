@@ -9,6 +9,7 @@ import stylesNavbar from '../components/Navbar/navbar.module.css'
 import Footer from './Footer/Footer'
 import Navbar from './Navbar/Navbar'
 import Image from 'next/image'
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export default function CreativeIdeas() {
   const [isButtonClicked, setIsButtonClicked] = useState(false)
@@ -155,6 +156,7 @@ export default function CreativeIdeas() {
       <footer className={stylesFooter.footer}>
         <Footer />
       </footer>
+      <SpeedInsights />
     </main>
   )
 }
