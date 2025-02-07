@@ -24,7 +24,7 @@ export default function CreativeIdeas() {
   const [currentIdea, setCurrentIdea] = useState('')
   const [selectedCategoryDeadline, setSelectedCategoryDeadline] = useState('')
   const [showIdeas, setShowIdeas] = useState(false)
-  const [lastIdea, setLastIdea] = useState('');
+  const [shuffledIdeas, setShuffledIdeas] = useState([]);
 
   const handleIndustryChange = (event) => {
     const newIndustry = event.target.value;
@@ -38,47 +38,45 @@ export default function CreativeIdeas() {
   }
 
   const showIdeasOnClick = () => {
-    setSelectedIndustry(tempSelectedIndustry)
-    setSelectedCategory(tempSelectedCategory)
-
-    const selectedIndustryData = data.maptype[tempSelectedIndustry]
-    let ideas = []
-    let categoryDeadline = ''
-    let selectedCategoryData = null
-
+    setSelectedIndustry(tempSelectedIndustry);
+    setSelectedCategory(tempSelectedCategory);
+  
+    const selectedIndustryData = data.maptype[tempSelectedIndustry];
+    let ideas = [];
+    let categoryDeadline = '';
+    let selectedCategoryData = null;
+  
     if (selectedIndustryData) {
       selectedCategoryData = selectedIndustryData.find(
         (item) => item.category === tempSelectedCategory,
-      )
+      );
       if (selectedCategoryData) {
-  ideas = selectedCategoryData.ideas;
-  const deadlineRange = selectedCategoryData.deadline;
-  if (deadlineRange) {
-    const randomDeadline = Math.floor(Math.random() * (deadlineRange.max - deadlineRange.min + 1)) + deadlineRange.min;
-    categoryDeadline = randomDeadline.toString();
-  }
-}
-
+        ideas = selectedCategoryData.ideas;
+        const deadlineRange = selectedCategoryData.deadline;
+        if (deadlineRange) {
+          const randomDeadline = Math.floor(Math.random() * (deadlineRange.max - deadlineRange.min + 1)) + deadlineRange.min;
+          categoryDeadline = randomDeadline.toString();
+        }
+      }
     }
-
-    setSelectedCategoryDeadline(categoryDeadline)
-
-    
+  
+    setSelectedCategoryDeadline(categoryDeadline);
+  
     if (selectedCategoryData && ideas.length > 0) {
-      let newIdea;
-      do {
-        const randomIndex = Math.floor(Math.random() * ideas.length);
-        newIdea = ideas[randomIndex];
-      } while (newIdea === lastIdea && ideas.length > 1);
-      
-      setCurrentIdea(newIdea);
-      setLastIdea(newIdea);
+      if (shuffledIdeas.length === 0) {
+        const newShuffledIdeas = [...ideas].sort(() => Math.random() - 0.5);
+        setCurrentIdea(newShuffledIdeas[0]);
+        setShuffledIdeas(newShuffledIdeas.slice(1));
+      } else {
+        setCurrentIdea(shuffledIdeas[0]);
+        setShuffledIdeas(shuffledIdeas.slice(1));
+      }
     }
-    
-
-    setShowIdeas(true)
-    setIsButtonClicked(true)
-  }
+  
+    setShowIdeas(true);
+    setIsButtonClicked(true);
+  };
+  
 
   return (
     <main className={styles.main}>
