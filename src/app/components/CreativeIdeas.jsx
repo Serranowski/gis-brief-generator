@@ -63,19 +63,37 @@ export default function CreativeIdeas() {
     setSelectedCategoryDeadline(categoryDeadline);
   
     if (selectedCategoryData && ideas.length > 0) {
-      if (shuffledIdeas.length === 0) {
-        const newShuffledIdeas = [...ideas].sort(() => Math.random() - 0.5);
-        setCurrentIdea(newShuffledIdeas[0]);
-        setShuffledIdeas(newShuffledIdeas.slice(1));
+      let newShuffledIdeas;
+      
+     
+      if (selectedCategory !== tempSelectedCategory || shuffledIdeas.length === 0) {
+       
+        newShuffledIdeas = [...ideas].sort(() => Math.random() - 0.5);
       } else {
-        setCurrentIdea(shuffledIdeas[0]);
-        setShuffledIdeas(shuffledIdeas.slice(1));
+      
+        newShuffledIdeas = [...shuffledIdeas];
       }
+  
+     
+      setCurrentIdea(newShuffledIdeas[0]);
+      setShuffledIdeas(newShuffledIdeas.slice(1));
+  
+      
+      if (newShuffledIdeas.length === 1) {
+        const reshuffled = [...ideas].sort(() => Math.random() - 0.5);
+        setShuffledIdeas(reshuffled);
+      }
+    } else {
+     
+      setCurrentIdea('');
+      setShuffledIdeas([]);
     }
   
     setShowIdeas(true);
     setIsButtonClicked(true);
   };
+  
+  
   
 
   return (
