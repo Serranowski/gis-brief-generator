@@ -23,13 +23,13 @@
   "main": "next.config.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JuanBreva/gis-brief-generator.git"
+    "url": "git+https://github.com/Serranowski/gis-brief-generator.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/JuanBreva/gis-brief-generator/issues"
+    "url": "https://github.com/Serranowski/gis-brief-generator/issues"
   },
-  "homepage": "https://github.com/JuanBreva/gis-brief-generator#readme"
+  "homepage": "https://github.com/Serranowski/gis-brief-generator#readme"
 }
