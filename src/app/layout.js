@@ -8,7 +8,7 @@ export default function RootLayout({ children }) {
       <head>
         <title>Next.js</title>
       </head>
-      <body>
+      <body className={leagueSpartan.className}>{children}
         {children}
         <Analytics />
       </body>
@@ -22,10 +22,3 @@ export const metadata = {
   title: 'GIS Brief Generator',
 }
 
-export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-  <body className={leagueSpartan.className}>{children}</body>
-</html>
-  )
-}
