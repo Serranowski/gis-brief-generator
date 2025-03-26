@@ -6,7 +6,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <title>Next.js</title>
+        <title>GIS Brief Generator</title>
       </head>
       <body className={leagueSpartan.className}>
         {children}
