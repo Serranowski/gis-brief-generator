@@ -8,7 +8,7 @@ export default function RootLayout({ children }) {
       <head>
         <title>Next.js</title>
       </head>
-      <body className={leagueSpartan.className}>{children}
+      <body className={leagueSpartan.className}>
         {children}
         <Analytics />
       </body>
